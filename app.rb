@@ -9,6 +9,10 @@ class App < Sinatra::Base
     set :threaded, false
   end
 
+  def self.get(*args, &block)
+    aget(*args, &block)
+  end
+
   Router.init(self)
 
 end
